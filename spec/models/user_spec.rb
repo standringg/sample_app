@@ -76,7 +76,8 @@ describe User do
     before { @user.password_confirmation = "mismatch" }
     it { should_not be_valid }
   end
-describe "with a password that's too short" do
+  
+  describe "with a password that's too short" do
     before { @user.password = @user.password_confirmation = "a" * 5 }
     it { should be_invalid }
   end
